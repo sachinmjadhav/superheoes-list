@@ -9,16 +9,17 @@
 }
 
 .App-header {
+  width: 100vw;
   background-color: #3a3a3a;
   color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .App-header img {
-  margin-left: 7vw;
+  margin: 0 auto;
 }
 
 .App-link {
@@ -26,7 +27,7 @@
 }
 
 .input {
-  margin-left: calc(50% - 200px);
+  margin-left: calc(50% - 100px);
   width: 200px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -34,16 +35,18 @@
   font-size: 1.2rem;
   outline: none;
   border: 0.5px solid #333;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .list {
-  width: 80%;
+  width: 50%;
   margin: auto;
 }
 
 .hero {
   border: 1px solid #333;
+  transition: min-height 1s linear;
+  min-height: 70px;
   padding: 7px;
   border-radius: 10px;
   margin: 7px;
@@ -72,10 +75,20 @@
   margin-left: 25px;
 }
 
+.showInfoBtn {
+  background: white;
+  color: black;
+  border: 1px solid #999;
+}
+
+.hideInfoBtn {
+  background: red;
+  color: white;
+  border: 1px solid red;
+}
+
 .title button {
   padding: 7px;
-  background: #fff;
-  border: 1px solid #999;
   border-radius: 10px;
   font-size: 0.9rem;
   font-family: "Montserrat", sans-serif;
@@ -91,4 +104,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.message-enter {
+  opacity: 0.01;
+  transform: translateY(-50%);
+}
+.message-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+  transition: all 300ms ease-out;
+}
+.message-exit {
+  opacity: 0.5;
+  transform: scale(1) translateY(0%);
+}
+.message-exit-active {
+  opacity: 0.01;
+  transform: translateY(-50%);
+  transition: all 300ms ease-out;
 }

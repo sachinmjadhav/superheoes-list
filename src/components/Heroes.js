@@ -13,7 +13,7 @@ function Heroes({ Superheroes }) {
   );
 
   return (
-    <div style={{ width: "100vw" }}>
+    <React.Fragment>
       <input
         className="input"
         type="text"
@@ -27,7 +27,7 @@ function Heroes({ Superheroes }) {
           <Hero hero={hero} key={hero.superhero} />
         ))}
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 
