@@ -4,22 +4,30 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 10vmin;
+  height: 3rem;
   pointer-events: none;
 }
 
 .App-header {
   width: 100vw;
+  height: 80px;
   background-color: #3a3a3a;
   color: white;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  padding: 0;
   align-items: center;
-  justify-content: space-around;
+  /* flex-direction: row;
+  align-items: center;
+  justify-content: center; */
 }
 
 .App-header img {
-  margin: 0 auto;
+  justify-self: end;
+}
+
+.App-header h1 {
+  justify-self: start;
 }
 
 .App-link {
